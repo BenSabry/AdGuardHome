@@ -17,8 +17,8 @@ mkdir $tmp
 cd $tmp
 
 file="linux_amd64.tar.gz"
-wget -O "$file" "$download"
-tar -xvzf "$file"
+wget -O "$file" "$download" &> /dev/null
+tar -xvzf "$file" &> /dev/null
 
 mv "AdGuardHome" "$app"
 
