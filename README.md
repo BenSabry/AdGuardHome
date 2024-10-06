@@ -7,6 +7,7 @@ wget -qO - https://raw.githubusercontent.com/BenSabry/AdGuardHome/main/setup.sh 
 ```
 
 # Screenshot of AdGuardHome running
+*from AdGuardHome repo on github*
 <p align="center">
   <img src="https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif" width="800"/>
 </p>
