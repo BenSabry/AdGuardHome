@@ -2,8 +2,7 @@
 
 uid="BenSabry/AdGuardHome"
 url="https://github.com/$uid/archive/refs/heads/main.zip"
-tmp="/tmp/$uid"
-dir="$tmp"
+dir="/tmp/$uid"
 
 #region core functions
 download() {
@@ -78,7 +77,7 @@ srcroot="$dir/content"
 dstroot="/"
 
 presetup() {
-    download $url $tmp
+    download $url $dir
 
     executable "*" "$srcroot/etc/init.d"
     executable "*" "$srcroot/etc/periodic"
@@ -104,7 +103,7 @@ postsetup() {
         fi
     done
 
-    rm -rf "$tmp"
+    rm -rf "$dir"
 }
 #endregion
 
