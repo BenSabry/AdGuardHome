@@ -22,16 +22,15 @@ download() {
         rm $zipfile
 
         extracted="$(ls -d "$path/"* | head -n 1)"
+        
         mv "$extracted"/* "$path"
         rmdir "$extracted"
 
     )} &> /dev/null
 }
 executable() {
-    if [ -n "$2" ]; then
+    if [ -n "$2" ] && [ -d "$2" ]; then
         find "$2" -type f -name "$1" -exec chmod +x {} \;
-    else
-        echo "executable(): exception, path argument can not be empty."
     fi
 }
 copy() {
